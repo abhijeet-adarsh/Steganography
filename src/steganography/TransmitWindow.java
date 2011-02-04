@@ -679,17 +679,7 @@ public class TransmitWindow extends javax.swing.JFrame implements ActionListener
 				
 				MyDialog d = new MyDialog(frame, "Dialog");
 				d.setVisible(true);
-				try{
-					str1 = d.getText();
-				}
-			
-				catch (Exception e){
-					Component veiw = null;
-					JOptionPane.showMessageDialog(veiw,
-							"Please Enter Your Message", "Error!",
-							JOptionPane.ERROR_MESSAGE);
-					throw new NullPointerException("Please enter message");
-				}
+			        str1 = d.getText();
 				System.out.println(str1.getBytes());
 				System.out.println(str1);
 
