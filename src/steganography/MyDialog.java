@@ -37,12 +37,11 @@ public class MyDialog extends JDialog implements ActionListener {
 	}
 	public String getText() throws NullPointerException{
 			if(textArea.getText()==""){
-				textArea=null;
 				Component veiw = null;
 				JOptionPane.showMessageDialog(veiw,
 						"Please Enter Your Message", "Error!",
 						JOptionPane.ERROR_MESSAGE);
-				return null;
+				throw new NullPointerException("Please enter message");
 			}
 			else return textArea.getText();
 	}
